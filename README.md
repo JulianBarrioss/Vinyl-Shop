@@ -1,6 +1,6 @@
 # TODOs
 
-- create a carousel
+- fix carousel bug
 - add js logic
 - change styles
 
