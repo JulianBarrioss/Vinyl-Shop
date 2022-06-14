@@ -1,0 +1,17 @@
+.sorter {
+    height: 5vh;
+    display: flex;
+    justify-content: end;
+    padding-right: 6.8%;
+}
+
+.sorter-selector {
+    background-color: white;
+    width: 15%;
+    border: 3px solid black;
+    font-weight: 700;
+}
+
+.sorter-selector-option {
+    font-weight: 700;
+}

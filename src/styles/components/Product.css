@@ -16,6 +16,8 @@ html {
     margin: 15px 15px 15px 0;
     padding: 0%;
     display: inline-block;
+    z-index: 5;
+    cursor: pointer;
 }
 
 .product-div {
