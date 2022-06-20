@@ -76,4 +76,21 @@
     height: 10vh;
     margin-top: 20px;
     padding: 10px;
+    font-weight: 600;
+    font-size:medium
+}
+
+@media(max-width: 825px) {
+    .checkout {
+        display: flex;
+        flex-direction: column-reverse;
+        
+    }
+    .checkout__products-container {
+        width: 100%;
+        border-top: 3px solid black;
+    }
+    .checkout__amount {
+        width: 100%;
+    }
 }

@@ -1,5 +1,5 @@
-import React, { useContext, useState } from "react";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import React, { useContext, useState, useEffect } from "react";
+import { getAuth, signOut } from "firebase/auth";
 import { Link } from "react-router-dom";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import AlbumIcon from "@mui/icons-material/Album";
@@ -11,23 +11,20 @@ import "../styles/components/Header.css";
 
 const Header = () => {
   const { state, setSearchValue } = useContext(AppContext);
-  const [userHeaderName, setUserHeaderName] = useState('Hello, Guest');
+  const [userHeaderName, setUserHeaderName] = useState("Hello, Guest");
 
   const auth = getAuth();
 
+  const logOut = () => {
+    document.location.reload(true)
+    signOut(auth);
+  };
 
-
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        const userName = user.displayName;
-        setUserHeaderName(userName)
-      }
-    })
-
-
-  
-
-
+  useEffect(() => {
+    if (auth.currentUser) {
+      setUserHeaderName(auth.currentUser.displayName);
+    }
+  }, [auth.currentUser]);
 
   const onSearch = (event) => {
     setSearchValue(event.target.value);
@@ -54,8 +51,17 @@ const Header = () => {
       <div className="header__nav">
         <Link to="/checkout/login">
           <div className="nav__item">
-          <span className="nav__itemLineOne">{userHeaderName}</span>
-            <span className="nav__itemLineTwo">Sign in</span>
+            <span className="nav__itemLineOne">{userHeaderName}</span>
+            {!auth.currentUser && (
+              <span className="nav__itemLineTwo">Sign in</span>
+            )}
+            {auth.currentUser && (
+              <Link to='/'>
+                <span className="nav__itemLineTwo" onClick={logOut}>
+                  Log Out
+                </span>
+              </Link>
+            )}
           </div>
         </Link>
         <Link to="/checkout" className="nav__itemBagLink">
@@ -67,9 +73,7 @@ const Header = () => {
           </div>
         </Link>
       </div>
-
     </header>
-    
   );
 };
 

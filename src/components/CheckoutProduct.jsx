@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-import DeleteIcon from '@mui/icons-material/Delete';
+import DeleteIcon from "@mui/icons-material/Delete";
 
 import { AppContext } from "../context/AppContext";
-import '../styles/components/CheckoutProduct.css'
+import "../styles/components/CheckoutProduct.css";
 
 const CheckoutProduct = ({ product, indexValue }) => {
-    const { removeFromCart } = useContext(AppContext);
+  const { removeFromCart } = useContext(AppContext);
   return (
     <div className="checkout__product">
       <figure className="checkout__product-img-container">
@@ -16,9 +16,15 @@ const CheckoutProduct = ({ product, indexValue }) => {
         />
       </figure>
       <div className="checkout__product-info-container">
-        <p>{`${product.attributes.title} - ${product.attributes.artist}`}</p>
-        <p>{`Price: $${product.attributes.Price}`}</p>
-        <DeleteIcon sx={{ fontSize: 40 }} className="deleteIcon" onClick={() => removeFromCart(product, indexValue)}/>
+        <span>
+          <p>{`${product.attributes.title} - ${product.attributes.artist}`}</p>
+          <p>{`Price: $${product.attributes.Price}`}</p>
+        </span>
+        <DeleteIcon
+          sx={{ fontSize: 40 }}
+          className="deleteIcon"
+          onClick={() => removeFromCart(product, indexValue)}
+        />
       </div>
     </div>
   );

@@ -11,7 +11,7 @@
 .modal {
     position: fixed;
     width: 80%;
-    height: 80vh;
+    height: 80%;
     top: 15%;
     left: 10%;
     z-index: 1000;
@@ -45,6 +45,7 @@
     width: 40%;
     height: 100%;
     padding: 40px;
+    background-color: white;
 }
 
 .modal-product-div-title {
@@ -123,4 +124,51 @@
     font-size: 16px;
         -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
                 animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@media (max-width: 1100px) {
+    .modal {
+    overflow-x: scroll;
+    }
+    .modal-product {
+        flex-direction: column;
+    }
+    .modal-product-figure {
+        height: 40%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .modal-product-figure img {
+        width: 50%;
+        height: 100%;
+    }
+    .modal-product-div {
+        width: 100%;
+        padding: 0 40px 0 40px;
+    }
+    .modal-product-div-title {
+        font-size: 7vw;
+    }
+    .modal-product-div-artist, .modal-product-div-description, .modal-product-div-price {
+        font-size: 2.5vw;
+    }
+    .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .modal-product-div-button {
+        font-weight: 700;
+        font-size: 2.5vw;
+        background-color: white;
+        width: 40%;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        cursor: pointer;
+        border: 3px solid black;
+    }
 }

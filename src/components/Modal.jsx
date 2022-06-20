@@ -35,7 +35,7 @@ const Modal = ({ product, modalState, setModalState, setNotificationState,}) => 
             <button className='modal-product-div-button' onClick={() => {
               notificationHandle(product)
             }
-              }>Add to Cart <AddIcon className='modal-product-addIcon' fontSize='large' /></button>
+              }>Add to Cart <AddIcon className='modal-product-addIcon' /></button>
             
         </div>
         <AddIcon className='close' fontSize='large' onClick={() => setModalState(!modalState)}/>

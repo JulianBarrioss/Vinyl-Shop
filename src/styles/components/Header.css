@@ -72,7 +72,7 @@
 .header__nav {
     display: flex;
     justify-content: space-evenly;
-    margin: 0 10px 0;
+    margin: 0 10px 10px;
 }
 
 .nav__item {
@@ -123,4 +123,12 @@
 
 .nav_basketCount {
     margin: 0 10px;
+}
+
+
+@media (max-width: 730px) {
+    .header__nav a:first-child {
+        display: none;
+    }
+    
 }

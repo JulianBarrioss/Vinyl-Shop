@@ -45,6 +45,8 @@
     font-weight: 600;
     height: 30px;
     cursor: pointer;
+    border: 3px solid black;
+
 
 }
 
@@ -55,8 +57,9 @@
 
 .login__form-button-create {
     background-color: #fcea23;
+    border: 3px solid black;
     font-weight: 600;
-    height: 30px;
+    height: 40px;
     width: calc(100% - 50px);
     position: absolute;
     bottom: 20px;
@@ -66,4 +69,11 @@
 
 .login__form-button-create:hover {
     border: 3px solid #fcea23;
+}
+
+@media(max-width: 900px) {
+    .login__form-container {
+        width: 50%;
+        height: 60%;
+    }
 }

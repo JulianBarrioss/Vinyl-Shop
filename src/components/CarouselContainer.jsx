@@ -50,20 +50,13 @@ const CarouselContainer = () => {
       }
     >
       <div className="carousel__text">
-        <p>THE</p>
-        <p>GREATEST</p>
-        <p>ALBUMS</p>
+        <p>THE GREATEST ALBUMS</p>
       </div>
       <div className="carousel">
         <section className="slider">
           <NavigateBeforeIcon
             className="left-arrow"
             onClick={prevSlide}
-            fontSize="large"
-          />
-          <NavigateNextIcon
-            className="right-arrow"
-            onClick={nextSlide}
             fontSize="large"
           />
           {slides.map((item, index) => {
@@ -89,6 +82,11 @@ const CarouselContainer = () => {
               </div>
             );
           })}
+          <NavigateNextIcon
+            className="right-arrow"
+            onClick={nextSlide}
+            fontSize="large"
+          />
         </section>
       </div>
     </div>
