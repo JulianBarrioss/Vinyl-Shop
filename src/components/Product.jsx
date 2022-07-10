@@ -22,6 +22,7 @@ const Product = ({ product, setNotificationState, notificationState }) => {
         onClick={() => setModalState(!modalState)}
       >
         <img
+          loading="lazy"
           src={product.attributes.image}
           alt={product.attributes.title}
           className="product__image"

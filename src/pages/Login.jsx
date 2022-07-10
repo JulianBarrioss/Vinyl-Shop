@@ -9,7 +9,6 @@ import {
 import "../styles/pages/Login.css";
 
 import { initializeApp } from "firebase/app";
-// import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 import { updateProfile } from "firebase/auth";
@@ -27,8 +26,6 @@ const firebaseApp = initializeApp({
 const auth = getAuth(firebaseApp);
 const db = getFirestore(firebaseApp);
 
-// console.log(db);
-
 export { auth, db };
 
 const Login = () => {
@@ -42,15 +39,12 @@ const Login = () => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         history("/");
-        // const user = userCredential.user;
         return updateProfile(auth.currentUser, {
           displayName: name,
         });
-        // console.log(user);
 
       })
       .catch((error) => {
-        console.log(error.code)
         if(error.code === 'auth/weak-password') {
               alert('Your password must be atleast 6 characters')
             }
@@ -58,7 +52,6 @@ const Login = () => {
             if(error.code === 'auth/email-already-in-use') {
               alert('This account already exists!')
             }
-        // alert(error.message)
       });
   };
 
@@ -72,15 +65,12 @@ const Login = () => {
         if(error.code === 'auth/user-not-found') {
           alert('This account does not exist')
         }
-        // alert(error.message)
       });
   };
 
-  console.log(auth.currentUser)
 
   return (
     <div className="login">
-      <img src="" alt="" />
       <div className="login__form-container">
         <h2 className="login__form-title">Sign-in</h2>
         <form className="login__form">

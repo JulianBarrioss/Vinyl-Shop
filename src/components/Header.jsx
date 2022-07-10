@@ -16,7 +16,7 @@ const Header = () => {
   const auth = getAuth();
 
   const logOut = () => {
-    document.location.reload(true)
+    document.location.reload(true);
     signOut(auth);
   };
 
@@ -34,12 +34,12 @@ const Header = () => {
       <Link to="/" className="header__logo-link">
         <div className="header__logo">
           <AlbumIcon className="header__logoImage" fontSize="large" />
-          <h2 className="header__logoTitle">VinylStore</h2>
+          <h2 className="header__logoTitle">VinylShop</h2>
         </div>
       </Link>
       <div className="header__search">
         <input
-          placeholder="search by artist, titles or genders"
+          placeholder="search by artists, titles or genres"
           type="text"
           className="header__searchInput"
           onChange={onSearch}
@@ -49,18 +49,16 @@ const Header = () => {
         </div>
       </div>
       <div className="header__nav">
-        <Link to="/checkout/login">
+        <Link to={auth.currentUser ? "/" : "/checkout/login"}>
           <div className="nav__item">
             <span className="nav__itemLineOne">{userHeaderName}</span>
             {!auth.currentUser && (
               <span className="nav__itemLineTwo">Sign in</span>
             )}
             {auth.currentUser && (
-              <Link to='/'>
-                <span className="nav__itemLineTwo" onClick={logOut}>
-                  Log Out
-                </span>
-              </Link>
+              <span className="nav__itemLineTwo" onClick={logOut}>
+                Log Out
+              </span>
             )}
           </div>
         </Link>

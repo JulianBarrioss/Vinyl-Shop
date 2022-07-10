@@ -10,6 +10,7 @@ const CheckoutProduct = ({ product, indexValue }) => {
     <div className="checkout__product">
       <figure className="checkout__product-img-container">
         <img
+          loading="lazy"
           src={product.attributes.image}
           alt={product.attributes.title}
           className="checkout__product-img"

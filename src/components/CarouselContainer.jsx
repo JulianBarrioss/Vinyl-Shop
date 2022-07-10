@@ -9,7 +9,7 @@ import { Modal } from "./Modal";
 import "../styles/components/CarouselContainer.css";
 
 const CarouselContainer = () => {
-  const { searchValue } = useContext(AppContext);
+  const { searchValue, setNotificationState } = useContext(AppContext);
   const slides = CarouselData;
   const [current, setCurrent] = useState(0);
   const [modalState, setModalState] = useState(false);
@@ -53,41 +53,45 @@ const CarouselContainer = () => {
         <p>THE GREATEST ALBUMS</p>
       </div>
       <div className="carousel">
-        <section className="slider">
-          <NavigateBeforeIcon
-            className="left-arrow"
-            onClick={prevSlide}
-            fontSize="large"
-          />
-          {slides.map((item, index) => {
-            return (
-              <div
-                className={index === current ? "slide active" : "slide"}
-                key={index}
-                onClick={() => {
-                  setModalState(!modalState);
-                  clearTimeout(t);
-                }}
-              >
-                {index === current && (
-                  <>
-                    <img
-                      src={item.attributes.image}
-                      alt={item.attributes.title}
-                      className="image"
-                    />
-                    <Modal product={item} modalState={modalState} />
-                  </>
-                )}
-              </div>
-            );
-          })}
-          <NavigateNextIcon
-            className="right-arrow"
-            onClick={nextSlide}
-            fontSize="large"
-          />
-        </section>
+        <NavigateBeforeIcon
+          className="left-arrow"
+          onClick={prevSlide}
+          fontSize="large"
+        />
+        {slides.map((item, index) => {
+          return (
+            <div
+              className={index === current ? "slide active" : "slide"}
+              key={index}
+              onClick={() => {
+                setModalState(!modalState);
+                clearTimeout(t);
+              }}
+            >
+              {index === current && (
+                <>
+                  <img
+                    loading="lazy"
+                    src={item.attributes.image}
+                    alt={item.attributes.title}
+                    className="image"
+                  />
+                  <Modal
+                    product={item}
+                    modalState={modalState}
+                    setModalState={setModalState}
+                    setNotificationState={setNotificationState}
+                  />
+                </>
+              )}
+            </div>
+          );
+        })}
+        <NavigateNextIcon
+          className="right-arrow"
+          onClick={nextSlide}
+          fontSize="large"
+        />
       </div>
     </div>
   );

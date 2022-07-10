@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import { useLocalStorage } from "./useLocalStorage";
 import initialState from "../initalState";
 
 const firstState = {
@@ -8,11 +9,11 @@ const firstState = {
 };
 
 const useInitialState = () => {
-  const [state, setState] = useState(firstState);
+  const [state, setState] = useLocalStorage("state", firstState);
   const [initialProducts, setInitialProducts] = useState(initialState.data);
   const [notificationState, setNotificationState] = useState(false);
   const [searchValue, setSearchValue] = useState("");
-  const [sorter, setSorter] = useState('');
+  const [sorter, setSorter] = useState("");
 
   const addToCart = (payload) => {
     setState({
@@ -55,66 +56,57 @@ const useInitialState = () => {
 
   let sortedItems = 0;
 
-
-    if (sorter === "Title(A-Z)") {
-      sortedItems = searchedItems.sort((a, b) => {
-        if (a.attributes.title > b.attributes.title) {
-          return 1;
-        }
-        if (a.attributes.title < b.attributes.title) {
-          return -1;
-        }
-        return 0;
-      });
-
-    } else if (sorter === "Title(Z-A)") {
-      sortedItems = searchedItems.sort((a, b) => {
-        if (a.attributes.title > b.attributes.title) {
-          return -1;
-        }
-        if (a.attributes.title < b.attributes.title) {
-          return 1;
-        }
-        return 0;
-      });
-      
-
-    } else if (sorter === "Artist(A-Z)") {
-      sortedItems = searchedItems.sort((a, b) => {
-        if (a.attributes.artist > b.attributes.artist) {
-          return 1;
-        }
-        if (a.attributes.artist < b.attributes.artist) {
-          return -1;
-        }
-        return 0;
-      });
-      
-      
-    } else if (sorter === "Artist(Z-A)") {
-      sortedItems = searchedItems.sort((a, b) => {
-        if (a.attributes.artist > b.attributes.artist) {
-          return -1;
-        }
-        if (a.attributes.artist < b.attributes.artist) {
-          return 1;
-        }
-        return 0;
-      });
-      
-
-    } else if (sorter === "Price(High to Low)") {
-      sortedItems = searchedItems.sort((a, b) => b.attributes.Price - a.attributes.Price);
-      
-      
-    } else if (sorter === "Price(Low to High)") {
-      sortedItems = searchedItems.sort((a, b) => a.attributes.Price - b.attributes.Price);
-      
-
-    } else {
-      sortedItems = searchedItems;
-      
-    }
+  if (sorter === "Title(A-Z)") {
+    sortedItems = searchedItems.sort((a, b) => {
+      if (a.attributes.title > b.attributes.title) {
+        return 1;
+      }
+      if (a.attributes.title < b.attributes.title) {
+        return -1;
+      }
+      return 0;
+    });
+  } else if (sorter === "Title(Z-A)") {
+    sortedItems = searchedItems.sort((a, b) => {
+      if (a.attributes.title > b.attributes.title) {
+        return -1;
+      }
+      if (a.attributes.title < b.attributes.title) {
+        return 1;
+      }
+      return 0;
+    });
+  } else if (sorter === "Artist(A-Z)") {
+    sortedItems = searchedItems.sort((a, b) => {
+      if (a.attributes.artist > b.attributes.artist) {
+        return 1;
+      }
+      if (a.attributes.artist < b.attributes.artist) {
+        return -1;
+      }
+      return 0;
+    });
+  } else if (sorter === "Artist(Z-A)") {
+    sortedItems = searchedItems.sort((a, b) => {
+      if (a.attributes.artist > b.attributes.artist) {
+        return -1;
+      }
+      if (a.attributes.artist < b.attributes.artist) {
+        return 1;
+      }
+      return 0;
+    });
+  } else if (sorter === "Price(High to Low)") {
+    sortedItems = searchedItems.sort(
+      (a, b) => b.attributes.Price - a.attributes.Price
+    );
+  } else if (sorter === "Price(Low to High)") {
+    sortedItems = searchedItems.sort(
+      (a, b) => a.attributes.Price - b.attributes.Price
+    );
+  } else {
+    sortedItems = searchedItems;
+  }
 
   return {
     state,
@@ -129,7 +121,7 @@ const useInitialState = () => {
 
     sortedItems,
     setSorter,
-    sorter
+    sorter,
   };
 };
 

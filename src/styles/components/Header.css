@@ -130,5 +130,9 @@
     .header__nav a:first-child {
         display: none;
     }
+
+    .header__logoTitle {
+        display: none;
+    }
     
 }

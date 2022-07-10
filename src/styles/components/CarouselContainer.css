@@ -2,7 +2,7 @@
     position: relative;
     height: 50vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     cursor: pointer;
 }
@@ -15,26 +15,19 @@
 }
 
 .right-arrow {
-    position: absolute;
-    right: 12%;
     font-size: 3rem;
-    color: black;
     z-index: 10;
     cursor: pointer;
     user-select: none;
 }
 
 .left-arrow {
-    position: absolute;
-    /* top: 50%; */
-    left: 12%;
-    font-size: 10rem;
-    color: black;
+    font-size: 3rem;
     z-index: 10;
     cursor: pointer;
     user-select: none;
-    font-weight: 800;
 }
+
 
 .slide {
     opacity: 0;
@@ -134,11 +127,6 @@
     .carousel {
         height: 80%;
         width: 100%;
-    }
-    .slide {
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
     .image {
         width: 50%;
