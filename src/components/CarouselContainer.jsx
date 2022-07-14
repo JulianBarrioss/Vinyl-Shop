@@ -31,7 +31,7 @@ const CarouselContainer = () => {
 
   const classChanger = () => {
     if (current === 0) {
-      return "mbdtf";
+      return "starboy";
     } else if (current === 1) {
       return "blonde";
     } else if (current === 2) {

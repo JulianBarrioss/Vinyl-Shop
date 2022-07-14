@@ -2,10 +2,10 @@ export const CarouselData = [
     {
         id: '1',
         attributes: {
-            title: 'My Beautiful Dark Twisted Fantasy',
-            image: 'https://i.ibb.co/tL6pf11/MBDTF.jpg',
-            description: "My Beautiful Dark Twisted Fantasy is the fifth studio album by American rapper and producer Kanye West. It was released on November 22, 2010, by Def Jam Recordings and Roc-A-Fella Records. Thematically, My Beautiful Dark Twisted Fantasy explores West's status as a celebrity, consumer culture, race, and the idealism of the American Dream. Guest vocalists on the album include Nicki Minaj, Rihanna, Bon Iver, Jay-Z, Pusha T, Rick Ross, Kid Cudi, John Legend, Elton John, and Raekwon.",
-            Price: 45,
+            title: 'Starboy',
+            image: 'https://i.ibb.co/ft9SZN1/The-Weeknd-Starboy.png',
+            description: "Starboy is the third studio album by Canadian singer-songwriter the Weeknd, released on November 25, 2016, through XO and Republic Records. It features guest appearances from Daft Punk, Lana Del Rey, Kendrick Lamar, and Future. As the album's executive producers, the Weeknd and Doc McKinney enlisted a variety of producers such as Diplo, Cashmere Cat, Metro Boomin, Frank Dukes, and Labrinth, among others.",
+            Price: 33,
         }        
     },
     {
@@ -30,10 +30,10 @@ export const CarouselData = [
     {
         id: '4',
         attributes: {
-            title: 'ye',
-            image: 'https://i.ibb.co/XWRttTc/ye.jpg',
-            description: 'Ye is the eighth studio album by American rapper Kanye West. It was released on June 1, 2018, through GOOD Music and distributed by Def Jam Recordings. Following controversy surrounding an interview with TMZ, West re-recorded all the work on the album, with him completing it over the course of just two weeks at West Lake Ranch in Jackson Hole, Wyoming. Guest vocals from PartyNextDoor, Ty Dolla Sign, Kid Cudi, Charlie Wilson, Jeremih, and 070 Shake, among others, are included.',
-            Price: 90
+            title: 'Angles',
+            image: 'https://i.ibb.co/nQzd14L/81k0-AYA2s-WL-SL1500.jpg',
+            description: "Angles is the fourth studio album by American rock band The Strokes. It was released on March 18, 2011, through RCA Records. It was the group's first album in over five years, following First Impressions of Earth (2005).",
+            Price: 50
         }
     }
 ]

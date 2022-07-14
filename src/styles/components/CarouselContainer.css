@@ -91,9 +91,9 @@
     object-fit: cover;
 }
 
-.carousel__container.mbdtf {
-    background-color: #dd0a37;
-    color: #fbba8a
+.carousel__container.starboy {
+    background-color: #c8043a;
+    color: #d8ac0e;
 }
 
 .carousel__container.blonde {
@@ -107,8 +107,8 @@
 } 
 
 .carousel__container.ye {
-    background-color: #192e49;
-    color: #23dc40;
+    background-color: #f6c829;
+    color: #0196c0;
 } 
 
 .hidden {

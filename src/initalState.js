@@ -353,5 +353,137 @@ export default {
           "gender": "Electronic, Rock, Funk / Soul, Non-Music"
         }
       },
+      {
+        "id": 30,
+        "attributes": {
+          "title": "Cage the Elephant",
+          "image": "https://i.ibb.co/qmsnztQ/91-WN5cq-KW4-S-SX355.jpg",
+          "Price": 30,
+          "iuid": "vinyl-3",
+          "description": "Cage the Elephant is the debut studio album by the American rock band Cage the Elephant. The album was produced by Jay Joyce and released on June 23, 2008, in Europe by Relentless Records, and on March 24, 2009, in the United States by RCA/Jive Label Group. It was certified Platinum by the RIAA and spawned four singles.",
+          "artist": "Cage the Elephant",
+          "gender": "Rock / Alternative Rock"
+        }
+      },
+      {
+        "id": 31,
+        "attributes": {
+          "title": "Thank You Happy Birthday",
+          "image": "https://i.ibb.co/0cz5qCC/51-Cdcj1-Bd-DL-SY355.jpg",
+          "Price": 22,
+          "iuid": "vinyl-3",
+          "description": "Thank You Happy Birthday is the second studio album by American rock band Cage the Elephant. It was released on January 11, 2011[1] to positive critical reception.[2] The album was produced by Jay Joyce, who worked in the same capacity on the band's eponymous debut album.",
+          "artist": "Cage the Elephant",
+          "gender": "Rock / Alternative Rock"
+        }
+      },
+      {
+        "id": 32,
+        "attributes": {
+          "title": "Melophobia",
+          "image": "https://i.ibb.co/TW7Qz9C/71me0-QK83-HL-SY450.jpg",
+          "Price": 23,
+          "iuid": "vinyl-3",
+          "description": "Melophobia is the third studio album by American rock band Cage the Elephant. Recorded at St. Charles in Nashville, Tennessee and produced by Jay Joyce, the album was released on October 8, 2013, through RCA Records. It is also the final album that features lead guitarist Lincoln Parish",
+          "artist": "Cage the Elephant",
+          "gender": "Rock / Alternative Rock"
+        }
+      },
+      {
+        "id": 33,
+        "attributes": {
+          "title": "Tell Me I'm Pretty",
+          "image": "https://i.ibb.co/gmrVNFk/61kscb-Vw-HL-SL1500.jpg",
+          "Price": 24,
+          "iuid": "vinyl-3",
+          "description": "Tell Me I'm Pretty is the fourth studio album by American rock band Cage the Elephant. It was released on December 18, 2015, and was announced online on October 5, 2015. The album was recorded in the spring of 2015 at Easy Eye Sound in Nashville, Tennessee.[14] Vocalist Matt Shultz stated: With this record, we wanted to be more transparent. We wanted to capture the sentiment of each song, and whatever emotional response it provoked, to be really honest to that.",
+          "artist": "Cage the Elephant",
+          "gender": "Rock / Alternative Rock"
+        }
+      },
+      {
+        "id": 34,
+        "attributes": {
+          "title": "Social Cues",
+          "image": "https://i.ibb.co/BshPJMk/71p-V10q5-Zb-L-SL1500.jpg",
+          "Price": 25,
+          "iuid": "vinyl-3",
+          "description": "Social Cues is the fifth studio album by American rock band Cage the Elephant. Announced on January 31, 2019, the album was released on April 19, 2019.[2] The album is the first by the band to feature a title track. Social Cues won the award for Best Rock Album at the 62nd Annual Grammy Awards, making it the band's second album to win the award after Tell Me I'm Pretty.",
+          "artist": "Cage the Elephant",
+          "gender": "Rock / Alternative Rock"
+        }
+      },
+      {
+        "id": 35,
+        "attributes": {
+          "title": "Is This It",
+          "image": "https://i.ibb.co/f9r1Fr6/61l-NZQTUuv-L-SY355.jpg",
+          "Price": 36,
+          "iuid": "vinyl-3",
+          "description": "Is This It is the debut studio album by American rock band the Strokes. It was first released on July 30, 2001, in Australia, with RCA Records handling the release internationally and Rough Trade Records handling the United Kingdom release. It was recorded at Transporterraum in New York City with producer Gordon Raphael during March and April 2001. For their debut, the band strived to capture a simple sound that was not significantly enhanced in the studio. Building on their 2001 EP The Modern Age, the band members molded compositions largely through live takes during recording sessions, while songwriter and lead singer Julian Casablancas continued to detail the lives and relationships of urban youth.",
+          "artist": "The Strokes",
+          "gender": "Rock / Alternative Rock"
+        }
+      },
+      {
+        "id": 36,
+        "attributes": {
+          "title": "Room on Fire",
+          "image": "https://i.ibb.co/2k46xmV/71-Zcj-UILvd-L-SL1417.jpg",
+          "Price": 39,
+          "iuid": "vinyl-3",
+          "description": "Room on Fire is the second studio album by American rock band the Strokes, released on October 28, 2003, through RCA Records. Its title is derived from a lyric in the song, Reptilia.",
+          "artist": "The Strokes",
+          "gender": "Rock / Alternative Rock"
+        }
+      },
+      {
+        "id": 37,
+        "attributes": {
+          "title": "First Impressions of Earth",
+          "image": "https://i.ibb.co/R7xyKbw/814-STID2le-L-SX425.jpg",
+          "Price": 16,
+          "iuid": "vinyl-3",
+          "description": "First Impressions of Earth is the third studio album by American rock band the Strokes. It was released through RCA Records first on December 30, 2005, in Germany,[1] and January 3, 2006, elsewhere. Three singles were released from the album: Juicebox, Heart in a Cage, and You Only Live Once.",
+          "artist": "The Strokes",
+          "gender": "Rock / Alternative Rock"
+        }
+      },
+      {
+        "id": 38,
+        "attributes": {
+          "title": "Angles",
+          "image": "https://i.ibb.co/nQzd14L/81k0-AYA2s-WL-SL1500.jpg",
+          "Price": 50,
+          "iuid": "vinyl-3",
+          "description": "Angles is the fourth studio album by American rock band The Strokes. It was released on March 18, 2011, through RCA Records. It was the group's first album in over five years, following First Impressions of Earth (2005).",
+          "artist": "The Strokes",
+          "gender": "Rock / Alternative Rock"
+        }
+      },
+      {
+        "id": 39,
+        "attributes": {
+          "title": "Comedown Machine",
+          "image": "https://i.ibb.co/Q68gcyR/61-JWlz3hn-RL-SL1500.jpg",
+          "Price": 60,
+          "iuid": "vinyl-3",
+          "description": "Comedown Machine is the fifth studio album by American rock band the Strokes. It was released on March 26, 2013, through RCA Records.[1] The band decided to pull a media blackout for the album, with no promotion in the form of television appearances, interviews, photoshoots, live shows, or tours. The cover artwork was designed to resemble an old RCA tape reel box.",
+          "artist": "The Strokes",
+          "gender": "Rock / Alternative Rock"
+        }
+      },
+      {
+        "id": 40,
+        "attributes": {
+          "title": "The New Abnormal",
+          "image": "https://i.ibb.co/p1Wffn9/91l-FDGYRPr-L-SL1500.jpg",
+          "Price": 49,
+          "iuid": "vinyl-3",
+          "description": "The New Abnormal is the sixth studio album by American rock band the Strokes, released on April 10, 2020, through Cult and RCA Records. Their first full-length album since Comedown Machine (2013), it was produced by Rick Rubin and recorded at his Shangri-La studio in Malibu, California, with additional recording taking place at studios in Los Angeles County and Hawaii. The Strokes began performing songs from the album for the first time at throughout 2019 before revealing the album's track list and cover art in early 2020. At the Door, Bad Decisions, and Brooklyn Bridge to Chorus were released as singles prior to the album's release, with The Adults Are Talking being released to radio months later.",
+          "artist": "The Strokes",
+          "gender": "Rock / Alternative Rock"
+        }
+      },
     ],
 };
